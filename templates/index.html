@@ -1,0 +1,27 @@
+<html>
+<link rel="stylesheet" media="screen" href="{{ url_for('static',filename='bootstrap.min.css')}}">
+<head>
+</head>
+<body class="body">
+	<body>
+		<h3>
+            {{ title }}
+		</h3>
+
+        {% for p in paragraph %}
+        <p>
+            {{ p }}
+        </p>
+        {% endfor %}
+
+        {% if pageType=='about' %}
+        <p>
+            contact me
+        </p>
+        {% else %}
+        <p> Not about me </p>
+        {% endif %}
+	</body>
+</body>
+
+</html>
